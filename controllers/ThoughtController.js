@@ -17,16 +17,16 @@ module.exports = class ThoughtController{
     
         const thoughts = user.Thoughts.map((result) => result.dataValues)
     
-        let emptyToughts = true
+        let emptyThoughts = true
     
         if (thoughts.length > 0) {
-          emptyToughts = false
+          emptyThoughts = false
         }
     
         console.log(thoughts)
-        console.log(emptyToughts)
+        console.log(emptyThoughts)
     
-        res.render('thoughts/dashboard', { thoughts, emptyToughts })
+        res.render('thoughts/dashboard', { thoughts, emptyThoughts })
       }
 
     static showThoughts(req, res){
